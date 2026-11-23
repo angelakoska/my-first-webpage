@@ -124,3 +124,40 @@ footer { margin-top: 24px; }
   #about { grid-template-columns: 280px minmax(0, 1fr); }
   #about .portrait { width: 280px; }
 }
+.input-demo {
+  margin-top: 24px;
+}
+
+.input-demo label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.input-demo input {
+  width: 100%;
+  max-width: 420px;
+  padding: 10px 12px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font: inherit;
+}
+
+.input-demo input:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.live-preview {
+  max-width: 600px;
+  margin-top: 16px;
+  padding: 12px;
+  border-left: 4px solid var(--border);
+  background: var(--background);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.live-preview.has-text {
+  border-color: var(--focus);
+  background: var(--berry);
+}
