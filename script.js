@@ -9,3 +9,19 @@ if (funFactButton && funFact) {
     funFactButton.textContent = isHidden ? "Hide the fun fact" : "Show a fun fact";
   });
 }
+
+const topicInput = document.querySelector("#topic-input");
+const topicPreview = document.querySelector("#topic-preview");
+
+if (topicInput && topicPreview) {
+  topicInput.addEventListener("input", () => {
+    const topic = topicInput.value.trim();
+    const hasTopic = topic.length > 0;
+
+    topicPreview.textContent = hasTopic
+      ? `I'm interested in learning about ${topic}.`
+      : "Your topic preview will appear here.";
+
+    topicPreview.classList.toggle("has-text", hasTopic);
+  });
+}
